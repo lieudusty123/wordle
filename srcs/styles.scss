@@ -80,4 +80,21 @@ body {
 
 
     }
+
+    #info {
+        color: gold;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        position: absolute;
+        bottom: 5%;
+
+        div {
+            color: white;
+        }
+
+        span {
+            color: white;
+        }
+    }
 }

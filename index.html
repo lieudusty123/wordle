@@ -14,7 +14,7 @@
 
 <body>
     <form id="inputContainer">
-        <input type="text" name="mainInput" id="mainInput">
+        <input type="text" name="mainInput" id="mainInput" placeholder="Press play to start!">
         <button id="newGameButton">Start</button>
     </form>
 
@@ -38,6 +38,23 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <script type="module" src="./script.js"></script>
+
+    <section id="info">
+        <div><span style="color: gold;">This is Wordle!</span> In wordle you have 5 tries to find a 5 letter word.</div>
+        <div>When you take a guess each letter might have a different background color.</div>
+        <div>
+            <span style="color: darkgrey; font-weight: 700;">gray</span>
+            <span> - means that the letter is not in the word</span>
+        </div>
+        <div>
+            <span style="color: yellow; font-weight: 700;">yellow</span>
+            <span> - means that the letter is in the word but not in the correct position</span>
+        </div>
+        <div>
+            <span style="color: lightgreen; font-weight: 700;">green</span>
+            <span> - means that the letter is in the word and in the correct position</span>
+        </div>
+    </section>
 </body>
 
 </html>

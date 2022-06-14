@@ -24,6 +24,7 @@ newGameButton.addEventListener('click', (e) => {
     attempts = 0;
     divOutput.innerHTML = ''
     displayCorrectWord.innerHTML = ''
+    input.placeholder = ''
     input.disabled = false
 })
 
@@ -75,7 +76,7 @@ function checkLetters(newWordInput) {
         printedWordArr.push(newWord)
     }
     attempts += 1
-    console.log(attempts)
+    // console.log(attempts)
     if (attempts >= 5) {
         input.disabled = true
         displayCorrectWord.innerHTML = `The correct word was: ${chosenWord}`
