@@ -1,100 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 body {
-    // height: 60vh;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
     background-color: #14181b;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
-    #displayCorrectWord {
-        position: absolute;
-        top: 15%;
-        color: white;
-        font-size: 2rem;
-        margin: 1rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    form {
-        height: 60px;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 25vh;
-
-        input {
-            height: 60px;
-            width: 300px;
-            border: 1px solid gold;
-            box-sizing: border-box;
-            margin: 0;
-            margin-right: .5rem;
-            padding: .2rem;
-            background-color: #0d0f11;
-            color: white;
-            font-size: 2rem;
-
-            @media (max-width:700px) {
-
-                width: 50%;
-            }
-
-
-            &:disabled {
-                background-color: #293036;
-                cursor: not-allowed;
-            }
-        }
-
-        button {
-            height: 60px;
-            padding: 0 2rem 0 2rem;
-            background-color: transparent;
-            color: gold;
-            font-size: 2rem;
-            border: 1px solid gold;
-            -webkit-transition: all .3s;
-
-            &:hover {
-                cursor: pointer;
-                background-color: gold;
-                color: black;
-                transition: all .3s;
-            }
-        }
-
-    }
-
-    #divOutput {
-        position: absolute;
-        top: 34%;
-
-        #wordPlacment {
-            padding: 1rem;
-
-            .printedWord {
-                padding: .5rem;
-                font-size: 2rem;
-            }
-        }
-
-
-    }
-
-    #info {
-        color: gold;
+    main {
         display: flex;
         flex-direction: column;
-        font-size: 1.6rem;
-        position: absolute;
-        bottom: 5%;
+        justify-content: center;
 
-        div {
+        #displayCorrectWord {
             color: white;
+            font-size: 2rem;
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
         }
 
-        span {
-            color: white;
+        form {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+
+            input {
+                height: 60px;
+                width: 300px;
+                border: 1px solid gold;
+                box-sizing: border-box;
+                margin: 0;
+                margin-right: .5rem;
+                padding: .2rem;
+                background-color: #0d0f11;
+                color: white;
+                font-size: 2rem;
+
+                @media (max-width:700px) {
+
+                    width: 50%;
+                }
+
+
+                &:disabled {
+                    background-color: #293036;
+                    cursor: not-allowed;
+                }
+            }
+
+            button {
+                height: 60px;
+                padding: 0 2rem 0 2rem;
+                background-color: transparent;
+                color: gold;
+                font-size: 2rem;
+                border: 1px solid gold;
+                transition: all .3s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: gold;
+                    color: black;
+                    transition: all .3s;
+                }
+            }
+
+        }
+
+        #divOutput {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #wordPlacment {
+                padding: 1rem;
+
+                .printedWord {
+                    padding: .5rem;
+                    font-size: 2rem;
+                }
+            }
+
+
+        }
+
+        #info {
+            color: gold;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            margin: 2rem;
+
+
+            div {
+                color: white;
+            }
+
+            span {
+                color: white;
+            }
         }
     }
+
+
 }

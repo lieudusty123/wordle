@@ -1,20 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 body {
+  height: 100vh;
+  font-family: Montserrat, sans-serif;
   background-color: #14181b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body #displayCorrectWord {
-  position: absolute;
-  top: 15%;
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #displayCorrectWord {
   color: white;
   font-size: 2rem;
   margin: 1rem;
@@ -26,19 +42,17 @@ body #displayCorrectWord {
           justify-content: center;
 }
 
-body form {
+body main form {
   height: 60px;
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 25vh;
 }
 
-body form input {
+body main form input {
   height: 60px;
   width: 300px;
   border: 1px solid gold;
@@ -53,17 +67,17 @@ body form input {
 }
 
 @media (max-width: 700px) {
-  body form input {
+  body main form input {
     width: 50%;
   }
 }
 
-body form input:disabled {
+body main form input:disabled {
   background-color: #293036;
   cursor: not-allowed;
 }
 
-body form button {
+body main form button {
   height: 60px;
   padding: 0 2rem 0 2rem;
   background-color: transparent;
@@ -71,9 +85,10 @@ body form button {
   font-size: 2rem;
   border: 1px solid gold;
   -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-body form button:hover {
+body main form button:hover {
   cursor: pointer;
   background-color: gold;
   color: black;
@@ -81,21 +96,29 @@ body form button:hover {
   transition: all .3s;
 }
 
-body #divOutput {
-  position: absolute;
-  top: 34%;
+body main #divOutput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body #divOutput #wordPlacment {
+body main #divOutput #wordPlacment {
   padding: 1rem;
 }
 
-body #divOutput #wordPlacment .printedWord {
+body main #divOutput #wordPlacment .printedWord {
   padding: .5rem;
   font-size: 2rem;
 }
 
-body #info {
+body main #info {
   color: gold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,15 +128,14 @@ body #info {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 1.6rem;
-  position: absolute;
-  bottom: 5%;
+  margin: 2rem;
 }
 
-body #info div {
+body main #info div {
   color: white;
 }
 
-body #info span {
+body main #info span {
   color: white;
 }
 /*# sourceMappingURL=styles.css.map */

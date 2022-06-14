@@ -7,14 +7,15 @@ const newGameButton = document.querySelector('#newGameButton')
 let chosenWord;
 
 
+const infoSection = document.querySelector('#info')
 const divOutput = document.createElement('div')
 divOutput.id = 'divOutput'
-document.querySelector('body').append(divOutput)
+document.querySelector('main').insertBefore(divOutput, infoSection)
 
 let displayCorrectWord = document.createElement('div')
 displayCorrectWord.id = 'displayCorrectWord'
-let body = document.querySelector('body')
-body.insertBefore(displayCorrectWord, body.firstChild);
+let main = document.querySelector('main')
+main.insertBefore(displayCorrectWord, main.firstChild);
 
 
 newGameButton.addEventListener('click', (e) => {
@@ -48,44 +49,51 @@ let attempts = 0;
 function checkLetters(newWordInput) {
 
     let printedWordArr = []
-    for (let index = 0; index < newWordInput.length; index++) {
-        let letterPosition = chosenWord.indexOf(newWordInput[index])
-        let newWord = document.createElement('span')
-        newWord.className = 'printedWord'
-        newWord.textContent = `${newWordInput[index]}`
-        if (letterPosition === -1) {
-            // console.log('not in word')
-            newWord.style.backgroundColor = 'darkgrey'
-        }
-
-        else {
-            if (chosenWord[index] == newWordInput[index]) {
-                // console.log("exact")
-                newWord.style.backgroundColor = 'lightgreen'
-            }
-            else if (chosenWord.split(newWordInput[index]).length - 1 == newWordInput.split(newWordInput[index]).length - 1) {
-
-                // console.log('not quite')
-                newWord.style.backgroundColor = 'yellow'
-            }
-            else {
+    if (WORDS.indexOf(newWordInput) >= 0) {
+        displayCorrectWord.textContent = '';
+        for (let index = 0; index < newWordInput.length; index++) {
+            let letterPosition = chosenWord.indexOf(newWordInput[index])
+            let newWord = document.createElement('span')
+            newWord.className = 'printedWord'
+            newWord.textContent = `${newWordInput[index]}`
+            if (letterPosition === -1) {
                 // console.log('not in word')
                 newWord.style.backgroundColor = 'darkgrey'
             }
-        }
-        printedWordArr.push(newWord)
-    }
-    attempts += 1
-    // console.log(attempts)
-    if (attempts >= 5) {
-        input.disabled = true
-        displayCorrectWord.innerHTML = `The correct word was: ${chosenWord}`
-        createDiv(printedWordArr)
 
+            else {
+                if (chosenWord[index] == newWordInput[index]) {
+                    // console.log("exact")
+                    newWord.style.backgroundColor = 'lightgreen'
+                }
+                else if (chosenWord.split(newWordInput[index]).length - 1 == newWordInput.split(newWordInput[index]).length - 1) {
+
+                    // console.log('not quite')
+                    newWord.style.backgroundColor = 'yellow'
+                }
+                else {
+                    // console.log('not in word')
+                    newWord.style.backgroundColor = 'darkgrey'
+                }
+            }
+            printedWordArr.push(newWord)
+        }
+        attempts += 1
+        // console.log(attempts)
+        if (attempts >= 5) {
+            input.disabled = true
+            displayCorrectWord.innerHTML = `The correct word was: ${chosenWord}`
+            createDiv(printedWordArr)
+
+        }
+        else {
+            createDiv(printedWordArr)
+        }
     }
     else {
-        createDiv(printedWordArr)
+        displayCorrectWord.textContent = 'please write an actual word'
     }
+
 
 }
 

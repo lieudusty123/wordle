@@ -13,48 +13,39 @@
 </head>
 
 <body>
-    <form id="inputContainer">
-        <input type="text" name="mainInput" id="mainInput" placeholder="Press play to start!">
-        <button id="newGameButton">Start</button>
-    </form>
+
+    <main>
+        <form id="inputContainer">
+            <input type="text" name="mainInput" id="mainInput" placeholder="Press play to start!">
+            <button id="newGameButton">Start</button>
+        </form>
+
+        <section id="info">
+            <div><span style="color: gold;">This is Wordle!</span> In wordle you have 5 tries to find a 5 letter word.
+            </div>
+            <div>When you take a guess each letter might have a different background color.</div>
+            <br>
+            <div>
+                <span style="color: darkgrey; font-weight: 700;">gray</span>
+                <span> - means that the letter is not in the word</span>
+            </div>
+            <div>
+                <span style="color: yellow; font-weight: 700;">yellow</span>
+                <span> - means that the letter is in the word but not in the correct position</span>
+            </div>
+            <div>
+                <span style="color: lightgreen; font-weight: 700;">green</span>
+                <span> - means that the letter is in the word and in the correct position</span>
+            </div>
+        </section>
+    </main>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9709502905541008"
-        crossorigin="anonymous"></script>
-    <!-- side ad -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9709502905541008" data-ad-slot="3548578133"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9709502905541008"
-        crossorigin="anonymous"></script>
-    <!-- footer ad -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9709502905541008" data-ad-slot="2745814118"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <script type="module" src="./script.js"></script>
+    <script type="module" src="./wordsArr.js"></script>
 
-    <section id="info">
-        <div><span style="color: gold;">This is Wordle!</span> In wordle you have 5 tries to find a 5 letter word.</div>
-        <div>When you take a guess each letter might have a different background color.</div>
-        <div>
-            <span style="color: darkgrey; font-weight: 700;">gray</span>
-            <span> - means that the letter is not in the word</span>
-        </div>
-        <div>
-            <span style="color: yellow; font-weight: 700;">yellow</span>
-            <span> - means that the letter is in the word but not in the correct position</span>
-        </div>
-        <div>
-            <span style="color: lightgreen; font-weight: 700;">green</span>
-            <span> - means that the letter is in the word and in the correct position</span>
-        </div>
-    </section>
 </body>
 
 </html>
