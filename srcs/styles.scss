@@ -76,11 +76,20 @@ body {
             align-items: center;
 
             #wordPlacment {
-                padding: 1rem;
+                margin-top: 2rem;
+                padding: auto;
+                width: 200px;
+                display: flex;
+                justify-content: center;
 
                 .printedWord {
-                    padding: .5rem;
-                    font-size: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 3.5rem;
+                    font-size: 30px;
+                    width: 40px;
+                    padding: auto;
                 }
             }
 
