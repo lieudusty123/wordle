@@ -60,6 +60,7 @@ body form input {
 
 body form input:disabled {
   background-color: #293036;
+  cursor: not-allowed;
 }
 
 body form button {
@@ -69,14 +70,15 @@ body form button {
   color: gold;
   font-size: 2rem;
   border: 1px solid gold;
+  -webkit-transition: all .3s;
 }
 
 body form button:hover {
   cursor: pointer;
   background-color: gold;
   color: black;
-  -webkit-transition: all .6s;
-  transition: all .6s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 body #divOutput {
