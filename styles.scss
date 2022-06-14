@@ -1,0 +1,68 @@
+body {
+    height: 60vh;
+    background-color: #14181b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    #displayCorrectWord {
+        color: white;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    form {
+        height: 60px;
+        display: flex;
+
+        input {
+            height: 60px;
+            width: 300px;
+            border: 1px solid gold;
+            box-sizing: border-box;
+            margin: 0;
+            margin-right: .5rem;
+            padding: .2rem;
+            background-color: #0d0f11;
+            color: white;
+            font-size: 2rem;
+
+            &:disabled {
+                background-color: #293036;
+            }
+        }
+
+        button {
+            height: 60px;
+            padding: 0 2rem 0 2rem;
+            background-color: transparent;
+            color: gold;
+            font-size: 2rem;
+            border: 1px solid gold;
+
+            &:hover {
+                cursor: pointer;
+                background-color: gold;
+                color: black;
+                transition: all .6s;
+            }
+        }
+
+    }
+
+    #divOutput {
+        margin-top: 1rem;
+
+        #wordPlacment {
+            padding: 1rem;
+
+            .printedWord {
+                padding: .5rem;
+                font-size: 2rem;
+            }
+        }
+
+
+    }
+}
