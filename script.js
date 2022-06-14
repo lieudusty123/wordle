@@ -36,7 +36,7 @@ input.addEventListener('input', (e) => {
 })
 
 function wordGenerator() {
-    console.log(WORDS)
+    // console.log(WORDS)
     return WORDS[Math.floor(Math.random() * WORDS.length)]
 }
 
