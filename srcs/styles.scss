@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+html {
+    overflow: hidden;
+}
+
 body {
     height: 100vh;
     font-family: Montserrat, sans-serif;
-    background-color: #14181b;
+    background: rgb(20, 24, 27);
+    background: linear-gradient(315deg, rgb(27, 31, 32) 0%, rgb(42, 53, 66) 54%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,10 +21,9 @@ body {
 
         #displayCorrectWord {
             color: white;
-            font-size: 2rem;
             margin: 1rem;
-            display: flex;
-            justify-content: center;
+            text-align: center;
+
         }
 
         form {
@@ -37,10 +41,8 @@ body {
                 padding: .2rem;
                 background-color: #0d0f11;
                 color: white;
-                font-size: 2rem;
 
                 @media (max-width:700px) {
-
                     width: 50%;
                 }
 
@@ -74,9 +76,10 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 50vh;
 
             #wordPlacment {
-                margin-top: 2rem;
+                // margin-top: 2rem;
                 padding: auto;
                 width: 200px;
                 display: flex;
@@ -98,11 +101,6 @@ body {
 
         #info {
             color: gold;
-            display: flex;
-            flex-direction: column;
-            font-size: 1.6rem;
-            margin: 2rem;
-
 
             div {
                 color: white;
@@ -113,6 +111,58 @@ body {
             }
         }
     }
+}
 
+lottie-player {
+    display: none;
+    position: absolute;
+    bottom: 20%;
 
+    &#left-firework {
+        left: 30%;
+    }
+
+    &#right-firework {
+        right: 30%;
+    }
+}
+
+@media (min-width:700px) {
+    #displayCorrectWord {
+        font-size: 2rem;
+    }
+
+    #info {
+        font-size: 1.6rem;
+    }
+
+    #wordPlacment {
+        margin-top: 1rem;
+    }
+
+    form {
+        input {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width:700px) {
+    #displayCorrectWord {
+        font-size: 1.5rem;
+    }
+
+    #info {
+        font-size: 1rem;
+    }
+
+    #wordPlacment {
+        margin-top: 0.5rem;
+    }
+
+    form {
+        input {
+            font-size: 1.3rem;
+        }
+    }
 }

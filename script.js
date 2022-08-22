@@ -111,9 +111,22 @@ function createDiv(arr) {
         }
 
         if (correctIndex == 5) {
+            const fireworks = document.querySelectorAll('lottie-player')
+            console.log(fireworks)
+            fireworks.forEach(element => {
+                element.style.display = 'block'
+                element.style.opacity = '100'
+            })
+            setTimeout(() => {
+                fireworks.forEach(element => {
+                    element.style.display = 'none'
+                    setTimeout(() => {
+                        element.style.opacity = '0'
+                    }, 3000);
+                })
+            }, 4000);
             input.disabled = true
             displayCorrectWord.innerHTML = `You are correct!`
-
             correctIndex = 0;
         }
 
